@@ -82,11 +82,11 @@ export function ContactForm() {
   };
 
   return (
-    <Card color="transparent" shadow={false} className="contact-form">
-      {submitted ? (
-        <p className="fixed top-40 right-40">Submitted Successfully!</p>
-      ) : (
-        <span className="h-1"></span>
+    <Card shadow={false} className="contact-form">
+      {submitted && (
+        <p className="absolute top-70 right-0 text-green-900 font-bold px-5 py-2 w-full bg-orange-50 rounded-md">
+          Message Sent Successfully!
+        </p>
       )}
       <form method="post" className="mb-2 w-80 max-w-screen-lg sm:w-96">
         <div className="mb-1 flex flex-col gap-2">

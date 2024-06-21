@@ -4,6 +4,7 @@ import { useEffect } from "react";
 
 const Counters = () => {
   useEffect(() => {
+    console.log("use effect called");
     displayCounts();
   }, []);
   return (

@@ -9,6 +9,8 @@ import NavigationBar from "@/components/NavigationBar";
 import Processes from "@/components/Processes";
 import Services from "@/components/Services";
 
+export const runtime = "edge";
+
 export default function Home() {
   return (
     <>
