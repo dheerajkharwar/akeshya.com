@@ -1,4 +1,3 @@
-import { sendMail } from "@/app/utility/sendMail";
 import { NextResponse } from "next/server";
 
 export const runtime = "edge";
