@@ -78,7 +78,7 @@ export function ContactForm() {
     <div className="contact-form">
       <div className="h-5">
         {submitted && (
-          <p className="absolute top-70 right-10 lg:right-30  text-green-900 font-bold px-5 py-2 w-fit bg-orange-50 rounded-md">
+          <p className="absolute top-70 right-70  text-green-900 font-bold px-5 py-2 w-fit bg-orange-50 rounded-md">
             Message Sent Successfully!
           </p>
         )}
