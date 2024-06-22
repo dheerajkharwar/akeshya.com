@@ -1,11 +1,4 @@
-import {
-  Card,
-  Input,
-  Checkbox,
-  Button,
-  Typography,
-  Textarea,
-} from "@material-tailwind/react";
+import { Card, Button } from "@material-tailwind/react";
 import { useEffect, useState } from "react";
 
 export function ContactForm() {
@@ -82,7 +75,7 @@ export function ContactForm() {
   };
 
   return (
-    <Card shadow={false} className="contact-form">
+    <div className="contact-form">
       {submitted && (
         <p className="absolute top-70 right-0 text-green-900 font-bold px-5 py-2 w-full bg-orange-50 rounded-md">
           Message Sent Successfully!
@@ -140,7 +133,7 @@ export function ContactForm() {
           Send Message
         </Button>
       </form>
-    </Card>
+    </div>
   );
 }
 

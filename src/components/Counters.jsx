@@ -8,44 +8,52 @@ const Counters = () => {
     displayCounts();
   }, []);
   return (
-    <div className="flex flex-col lg:flex-row">
-      <div className="flex flex-col">
-        <div className="p-5">
+    <div className="flex flex-col lg:flex-row w-full">
+      <div className="flex flex-col p-5">
+        <div className="flex flex-row items-baseline mb-10">
           <i className="fa-regular fa-face-smile text-4xl pr-5"></i>
-          <span className="num font-bold text-4xl" data-val="3835039">
-            000
-          </span>
-          <h5 className="pt-2">
-            Organic Reach <span className="text">(Global)</span>
-          </h5>
+          <div className="flex flex-col items-baseline">
+            <p className="num font-bold text-4xl" data-val="3835039">
+              000
+            </p>
+            <h5 className="pt-2">
+              Organic Reach <span className="text">(Global)</span>
+            </h5>
+          </div>
         </div>
-        <div className="p-5">
+        <div className="flex flex-row items-baseline">
           <i className="fa-regular fa-clock text-4xl pr-5"></i>
-          <span className="num font-bold text-4xl" data-val="1481">
-            000
-          </span>
-          <h5 className="pt-2">
-            Watch Hours <span className="text">(Asia)</span>
-          </h5>
+          <div className="flex flex-col items-baseline">
+            <p className="num font-bold text-4xl" data-val="1481">
+              000
+            </p>
+            <h5 className="pt-2">
+              Watch Hours <span className="text">(Asia)</span>
+            </h5>
+          </div>
         </div>
       </div>
 
-      <div className="flex flex-col">
-        <div className="p-5">
+      <div className="flex flex-col p-5">
+        <div className="flex flex-row items-baseline mb-10">
           <i className="fa-solid fa-campground text-4xl pr-5"></i>
-          <span className="num font-bold text-4xl" data-val="85">
-            000
-          </span>
-          <h5 className="pt-2">Campaigns</h5>
+          <div className="flex flex-col items-baseline">
+            <p className="num font-bold text-4xl" data-val="85">
+              000
+            </p>
+            <h5 className="pt-2">Campaigns</h5>
+          </div>
         </div>
-        <div className="p-5">
+        <div className="flex flex-row items-baseline">
           <i className="fa-solid fa-globe text-4xl pr-5"></i>
-          <span className="num font-bold text-4xl" data-val="17">
-            000
-          </span>
-          <h5 className="pt-2">
-            Excellent CTR % <span className="text">(Asia)</span>
-          </h5>
+          <div className="flex flex-col items-baseline">
+            <p className="num font-bold text-4xl" data-val="17">
+              000
+            </p>
+            <h5 className="pt-2">
+              Excellent CTR % <span className="text">(Asia)</span>
+            </h5>
+          </div>
         </div>
       </div>
     </div>
@@ -59,12 +67,11 @@ function displayCounts() {
   valueDisplays.forEach((valueDisplay) => {
     let startValue = 0;
     let endValue = parseInt(valueDisplay.getAttribute("data-val"));
-    // let duration = Math.floor(interval / endValue);
-    let duration = 0.0005;
+    let duration = Math.floor(interval / endValue);
     let counter = setInterval(function () {
       startValue += 1;
       valueDisplay.textContent = startValue;
-      if (startValue == endValue) {
+      if (startValue >= endValue) {
         clearInterval(counter);
       }
     }, duration);

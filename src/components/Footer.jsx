@@ -4,8 +4,12 @@ import React from "react";
 const Footer = () => {
   return (
     <footer className="flex flex-row flex-wrap items-center justify-center py-6 text-center gap-y-6 gap-x-12 md:justify-between mx-10 border-t-2">
-      <p className="block font-sans text-base antialiased font-normal leading-relaxed text-blue-gray-900">
-        © <span className="font-bold">Akeshya</span>. All Rights Reserved
+      <p className="block font-sans text-base antialiased font-normal leading-relaxed">
+        ©{" "}
+        <span className="font-bold" style={{ color: "#14279b" }}>
+          Akeshya
+        </span>
+        . All Rights Reserved
       </p>
       <ul className="flex flex-wrap items-center gap-y-2 gap-x-8">
         <li>
