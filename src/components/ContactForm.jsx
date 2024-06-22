@@ -52,7 +52,7 @@ export function ContactForm() {
         subject,
         message,
       };
-      fetch("http://localhost:3000/api/contact", {
+      fetch("https://akeshya-com-e0x.pages.dev/api/contact", {
         method: "POST",
         headers: {
           Accept: "application/json, text/plain, */*",
