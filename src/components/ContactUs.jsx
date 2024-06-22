@@ -42,7 +42,7 @@ const ContactUs = () => {
             <p className="pl-5">+91 94942 40922</p>
           </div>
         </div>
-        <div className="flex flex-col space-y-1 p-5">
+        <div className="flex flex-col space-y-1">
           <ContactForm />
         </div>
       </div>

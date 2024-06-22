@@ -76,11 +76,13 @@ export function ContactForm() {
 
   return (
     <div className="contact-form">
-      {submitted && (
-        <p className="absolute top-70 right-0 text-green-900 font-bold px-5 py-2 w-full bg-orange-50 rounded-md">
-          Message Sent Successfully!
-        </p>
-      )}
+      <div className="h-5">
+        {submitted && (
+          <p className="absolute top-70 right-0 text-green-900 font-bold px-5 py-2 w-fit bg-orange-50 rounded-md">
+            Message Sent Successfully!
+          </p>
+        )}
+      </div>
       <form method="post" className="mb-2 w-80 max-w-screen-lg sm:w-96">
         <div className="mb-1 flex flex-col gap-2">
           <input
@@ -92,7 +94,9 @@ export function ContactForm() {
             }}
             placeholder="Name"
           />
-          {errors.name && <p style={styles.error}>{errors.name}</p>}
+          <div className="h-5">
+            {errors.name && <p style={styles.error}>{errors.name}</p>}
+          </div>
           <input
             type="email"
             name="email"
@@ -102,7 +106,9 @@ export function ContactForm() {
             }}
             placeholder="Email"
           />
-          {errors.email && <p style={styles.error}>{errors.email}</p>}
+          <div className="h-5">
+            {errors.email && <p style={styles.error}>{errors.email}</p>}
+          </div>
           <input
             type="text"
             name="subject"
@@ -112,7 +118,9 @@ export function ContactForm() {
             }}
             placeholder="Subject"
           />
-          {errors.subject && <p style={styles.error}>{errors.subject}</p>}
+          <div className="h-5">
+            {errors.subject && <p style={styles.error}>{errors.subject}</p>}
+          </div>
           <textarea
             rows={3}
             name="message"
@@ -122,7 +130,9 @@ export function ContactForm() {
             }}
             placeholder="Message"
           />
-          {errors.message && <p style={styles.error}>{errors.message}</p>}
+          <div className="h-5">
+            {errors.message && <p style={styles.error}>{errors.message}</p>}
+          </div>
         </div>
         <Button
           onClick={(e) => {
