@@ -1,4 +1,4 @@
-import { Card, Button } from "@material-tailwind/react";
+import { Button } from "@material-tailwind/react";
 import { useEffect, useState } from "react";
 
 export function ContactForm() {
@@ -66,11 +66,11 @@ export function ContactForm() {
           setEmail("");
           setSubject("");
           setMessage("");
+          setTimeout(() => {
+            setSubmitted(false);
+          }, 3000);
         }
       });
-      setTimeout(() => {
-        setSubmitted(false);
-      }, 3000);
     }
   };
 
