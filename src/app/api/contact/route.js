@@ -1,5 +1,7 @@
 import { NextResponse } from "next/server";
 
+export const runtime = "edge";
+
 export async function POST(req) {
   // const data = req.formData();
   const data = await req.json();
